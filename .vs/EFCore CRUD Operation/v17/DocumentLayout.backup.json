@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "EFCore CRUD Operation\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\MyProjects\\MyRepo\\GitRepoUpdate2025\\EFCore CRUD Operation\\EFCore CRUD Operation\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "EFCore CRUD Operation\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T13:07:32.635Z",
               "EditorCaption": ""
@@ -71,8 +71,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Config\\DatabaseConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T13:05:43.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T13:05:43.94Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T13:03:44.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T13:03:44.801Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Services\\EmplyeeServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:47:21.919Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:47:21.919Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Mapper\\EntityMapper.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:45:56.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:45:56.031Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Models\\EmployeeModel.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:44:30.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:44:30.909Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Config\\GlobalConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:43:02.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:43:02.191Z"
             },
             {
               "$type": "Document",
@@ -149,8 +143,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\Entities\\AppDbContext\\TblEmployee.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwBUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:42:26.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:42:26.113Z"
             },
             {
               "$type": "Document",
@@ -162,8 +155,7 @@
               "RelativeToolTip": "EFCore CRUD Operation\\EFDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:41:26.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T12:41:26.07Z"
             }
           ]
         }
