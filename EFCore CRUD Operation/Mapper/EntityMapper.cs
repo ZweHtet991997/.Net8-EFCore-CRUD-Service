@@ -15,8 +15,21 @@ namespace EFCore_CRUD_Operation.Mapper
                 OfficeLocation = model.OfficeLocation,
                 Department = model.Department,
                 CreatedDate = DateTime.Now
-
             };
+        }
+
+        public static List<TblEmployee> ToListEntity(this List<EmployeeRequestModel> employeeList)
+        {
+            return employeeList.Select(employee => new TblEmployee
+            {
+                EmployeeCode = employee.EmployeeCode,
+                FullName = employee.FullName,
+                Email = employee.Email,
+                PhoneNumber = employee.PhoneNumber,
+                OfficeLocation = employee.OfficeLocation,
+                Department = employee.Department,
+                CreatedDate = DateTime.Now
+            }).ToList();
         }
 
         public static TblEmployee ToEntity(this EmployeeRequestModel model, TblEmployee entity)

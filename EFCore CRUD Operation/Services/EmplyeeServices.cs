@@ -1,4 +1,5 @@
 ﻿using AppDbContext;
+using EFCore.BulkExtensions;
 using EFCore_CRUD_Operation.Mapper;
 using EFCore_CRUD_Operation.Models;
 
@@ -13,6 +14,7 @@ namespace EFCore_CRUD_Operation.Services
             _context = context;
         }
 
+        #region SingleOperations
         public async Task<bool> CreateEmployee(EmployeeRequestModel model)
         {
             try
@@ -86,5 +88,68 @@ namespace EFCore_CRUD_Operation.Services
                 throw;
             }
         }
+        #endregion
+
+        #region BulkOperations
+
+        public async Task<bool> BulkCreateEmployeeAsync(List<EmployeeRequestModel> employeeList)
+        {
+            try
+            {
+                var updateEmployeeList = employeeList.Where(x => x.Department == department).ToList();
+
+                await _context.BulkInsertAsync(updateEmployeeList.ToListEntity());
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<bool> BulkUpdateEmployeeAsync(string department, List<EmployeeRequestModel> employeeList)
+        {
+            try
+            {
+                var employeesToUpdate = employeeList.Where(x => x.Department == department).ToList();
+
+                if (employeesToUpdate.Count > 0)
+                {
+                    await _context.BulkUpdateAsync(employeesToUpdate.ToListEntity());
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<bool> BulkDeleteEmployeeAsync(string department)
+        {
+            try
+            {
+                var employeeToDelete = await _context.TblEmployees
+                    .Where(x => x.Department == department).ToListAsync();
+
+                if (employeeToDelete.Count > 0)
+                {
+                    _context.BulkDelete(employeeToDelete);
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        #endregion
     }
 }

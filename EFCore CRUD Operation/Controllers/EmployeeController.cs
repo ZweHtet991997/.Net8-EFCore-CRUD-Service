@@ -14,6 +14,8 @@ namespace EFCore_CRUD_Operation.Controllers
             _employeeServices = employeeServices;
         }
 
+        #region SingleOperations
+
         [HttpPost("api/employee")]
         public async Task<IActionResult> CreateEmployee([FromBody] EmployeeRequestModel model)
         {
@@ -39,5 +41,33 @@ namespace EFCore_CRUD_Operation.Controllers
         {
             return Ok(await _employeeServices.DeleteEmployee(Id));
         }
+
+        #endregion
+
+        #region BulkOperations
+
+        [HttpPost("api/bulk/employee")]
+        public async Task<IActionResult> BulkCreateEmployee([FromBody] List<EmployeeRequestModel> employeeList)
+        {
+            var dataResult = await _employeeServices.BulkCreateEmployeeAsync(employeeList);
+            return dataResult ? Ok() : BadRequest();
+        }
+
+        [HttpPut("api/bulk/employee")]
+        public async Task<IActionResult> BulkUpdateEmployee(string department,
+            List<EmployeeRequestModel> employeeList)
+        {
+            var dataResult = await _employeeServices.BulkUpdateEmployeeAsync(department, employeeList);
+            return dataResult ? Ok() : BadRequest();
+        }
+
+        [HttpDelete("api/bulk/employee")]
+        public async Task<IActionResult> BulkDeleteEmployee(string department)
+        {
+            var dataResult = await _employeeServices.BulkDeleteEmployeeAsync(department);
+            return dataResult ? Ok() : BadRequest();
+        }
+
+        #endregion
     }
 }

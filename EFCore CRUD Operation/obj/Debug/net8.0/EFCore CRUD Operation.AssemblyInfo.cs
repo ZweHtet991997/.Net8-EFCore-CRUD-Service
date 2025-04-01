@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFCore CRUD Operation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15d8c427339a7a1e310421c65489ca2fa8a57133")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFCore CRUD Operation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFCore CRUD Operation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
