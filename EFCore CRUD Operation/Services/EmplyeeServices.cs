@@ -96,9 +96,7 @@ namespace EFCore_CRUD_Operation.Services
         {
             try
             {
-                var updateEmployeeList = employeeList.Where(x => x.Department == department).ToList();
-
-                await _context.BulkInsertAsync(updateEmployeeList.ToListEntity());
+                await _context.BulkInsertAsync(employeeList.ToListEntity());
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -108,23 +106,17 @@ namespace EFCore_CRUD_Operation.Services
             }
         }
 
-        public async Task<bool> BulkUpdateEmployeeAsync(string department, List<EmployeeRequestModel> employeeList)
+        public async Task<bool> BulkUpdateEmployeeAsync(List<EmployeeRequestModel> employeeList)
         {
             try
             {
-                var employeesToUpdate = employeeList.Where(x => x.Department == department).ToList();
-
-                if (employeesToUpdate.Count > 0)
-                {
-                    await _context.BulkUpdateAsync(employeesToUpdate.ToListEntity());
-                    await _context.SaveChangesAsync();
-                    return true;
-                }
-                return false;
+                await _context.BulkUpdateAsync(employeeList.ToListEntity());
+                await _context.SaveChangesAsync();
+                return true;
             }
             catch (Exception)
             {
-                throw;
+                return false;
             }
         }
 
@@ -137,7 +129,7 @@ namespace EFCore_CRUD_Operation.Services
 
                 if (employeeToDelete.Count > 0)
                 {
-                    _context.BulkDelete(employeeToDelete);
+                    await _context.BulkDeleteAsync(employeeToDelete);
                     await _context.SaveChangesAsync();
                     return true;
                 }

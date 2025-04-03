@@ -15,7 +15,7 @@ public partial class TblEmployee
 
     public string OfficeLocation { get; set; } = null!;
 
-    public string Department { get; set; } = null!;
+    public string? Department { get; set; } = null!;
 
     public DateTime CreatedDate { get; set; }
 

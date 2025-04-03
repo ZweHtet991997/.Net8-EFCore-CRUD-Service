@@ -22,6 +22,7 @@ namespace EFCore_CRUD_Operation.Mapper
         {
             return employeeList.Select(employee => new TblEmployee
             {
+                Id = employee.Id > 0 ? employee.Id : 0,
                 EmployeeCode = employee.EmployeeCode,
                 FullName = employee.FullName,
                 Email = employee.Email,

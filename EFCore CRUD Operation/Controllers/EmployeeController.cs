@@ -54,10 +54,9 @@ namespace EFCore_CRUD_Operation.Controllers
         }
 
         [HttpPut("api/bulk/employee")]
-        public async Task<IActionResult> BulkUpdateEmployee(string department,
-            List<EmployeeRequestModel> employeeList)
+        public async Task<IActionResult> BulkUpdateEmployee([FromBody] List<EmployeeRequestModel> employeeList)
         {
-            var dataResult = await _employeeServices.BulkUpdateEmployeeAsync(department, employeeList);
+            var dataResult = await _employeeServices.BulkUpdateEmployeeAsync(employeeList);
             return dataResult ? Ok() : BadRequest();
         }
 
